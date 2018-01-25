@@ -4,7 +4,7 @@ Background::Background() //Constructor, Loads the background texture and sets it
 {
 	if (!tBackground.loadFromFile(loadFile))
 	{
-		std::cout << "Error loading <background image> from file" << std::endl;
+		std::cout << "Error loading <background texture> from file" << std::endl;
 	}
 	sBackground.setTexture(tBackground);
 	sBackground.setPosition(0, 0);

@@ -36,4 +36,4 @@ private:
 	sf::String loadFont = "fonts/opensans.ttf"; //String with the path to the .ttf
 };
 
-#endif //HUD_H
+#endif //!HUD_H

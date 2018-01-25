@@ -13,4 +13,4 @@ enum class GameStates //enum class with different kind of GameStates
 	PAUSE_GAME
 };
 
-#endif //GAMESTATES_H
+#endif //!GAMESTATES_H

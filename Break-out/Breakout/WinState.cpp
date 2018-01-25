@@ -4,7 +4,7 @@ WinState::WinState() //Constructor, Loads the WinState texture and sets it to th
 {
 	if (!tWinState.loadFromFile(loadFile))
 	{
-		std::cout << "Error loading <WinState> From File" << std::endl;
+		std::cout << "Error loading <winState texture> From File" << std::endl;
 	}
 	sWinState.setTexture(tWinState);
 	sWinState.setPosition(0, 0);

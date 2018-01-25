@@ -4,9 +4,8 @@ Ball::Ball() //Constructor, Loads the ball texture and sets it to the ball sprit
 {
 	if (!tBall.loadFromFile(loadFile))
 	{
-		std::cout << "Error loading file <ball> from loadfile " << std::endl;
+		std::cout << "Error loading file <ball texture> from loadfile " << std::endl;
 	}
-
 	sBall.setTexture(tBall);
 	sBall.setPosition(ballPosX, ballPosY);
 }

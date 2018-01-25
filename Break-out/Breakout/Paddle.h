@@ -36,4 +36,4 @@ private:
 	sf::String loadFile = "images/paddle.png"; //String with the path to the .png
 };
 
-#endif //PADDLE_H
+#endif //!PADDLE_H

@@ -40,19 +40,19 @@ void Game::ProcessEvents() //Handles Switch cases & Event Handlers
 			{
 				isGameStarting = true;
 			}
-			if (event.key.code == sf::Keyboard::Left && gStates == GameStates::START_MENU) //Within StartMenu you can move selected item to the left
+			if (event.key.code == sf::Keyboard::Left || event.key.code == sf::Keyboard::A && gStates == GameStates::START_MENU) //Within StartMenu you can move selected item to the left
 			{
 				startMenu.MoveLeft();
 			}
-			if (event.key.code == sf::Keyboard::Right && gStates == GameStates::START_MENU) //Within StartMenu you can move selected item to the left
+			if (event.key.code == sf::Keyboard::Right || event.key.code == sf::Keyboard::D && gStates == GameStates::START_MENU) //Within StartMenu you can move selected item to the left
 			{
 				startMenu.MoveRight();
 			}
-			if (event.key.code == sf::Keyboard::Left && gStates == GameStates::HOW_TO_PLAY) //Within HowToPlay you can move selected item to the left
+			if (event.key.code == sf::Keyboard::Left || event.key.code == sf::Keyboard::A && gStates == GameStates::HOW_TO_PLAY) //Within HowToPlay you can move selected item to the left
 			{
 				howToPlay.MoveLeft();
 			}
-			if (event.key.code == sf::Keyboard::Right && gStates == GameStates::HOW_TO_PLAY) //Within HowToPlay you can move selected item to the right
+			if (event.key.code == sf::Keyboard::Right || event.key.code == sf::Keyboard::D && gStates == GameStates::HOW_TO_PLAY) //Within HowToPlay you can move selected item to the right
 			{
 				howToPlay.MoveRight();
 			}
@@ -68,7 +68,6 @@ void Game::ProcessEvents() //Handles Switch cases & Event Handlers
 					hud.ResetAll();
 					paddle.ResetPaddle();
 					ball.ResetBall();
-					std::cout << "Switch To GameLoop" << std::endl;
 					gStates = GameStates::GAME_LOOP;
 				}
 				else if (gStates == GameStates::LOSE_STATE)
@@ -77,7 +76,6 @@ void Game::ProcessEvents() //Handles Switch cases & Event Handlers
 					hud.ResetAll();
 					paddle.ResetPaddle();
 					ball.ResetBall();
-					std::cout << "Switch To GameLoop" << std::endl;
 					gStates = GameStates::GAME_LOOP;
 				}
 			}
@@ -89,7 +87,6 @@ void Game::ProcessEvents() //Handles Switch cases & Event Handlers
 					hud.ResetAll();
 					paddle.ResetPaddle();
 					ball.ResetBall();
-					std::cout << "Switch To StartMenu" << std::endl;
 					gStates = GameStates::START_MENU;
 				}
 				else if (gStates == GameStates::LOSE_STATE)
@@ -98,7 +95,6 @@ void Game::ProcessEvents() //Handles Switch cases & Event Handlers
 					hud.ResetAll();
 					paddle.ResetPaddle();
 					ball.ResetBall();
-					std::cout << "Switch To MainMenu" << std::endl;
 					gStates = GameStates::START_MENU;
 				}
 			}
@@ -106,12 +102,10 @@ void Game::ProcessEvents() //Handles Switch cases & Event Handlers
 			{
 				if (gStates == GameStates::PAUSE_GAME)
 				{
-					std::cout << "Switch To Game Loop" << std::endl;
 					gStates = GameStates::GAME_LOOP;
 				}
 				else if(gStates == GameStates::GAME_LOOP)
 				{
-					std::cout << "Switch To Pause Game" << std::endl;
 					gStates = GameStates::PAUSE_GAME;
 				}	
 			}
@@ -121,7 +115,6 @@ void Game::ProcessEvents() //Handles Switch cases & Event Handlers
 				{
 				case 0:
 				{
-					std::cout << "Play has been pressed" << std::endl;
 					soundManager.StopSound(0);
 					soundManager.PlaySound(1);
 					gStates = GameStates::GAME_LOOP;
@@ -129,7 +122,6 @@ void Game::ProcessEvents() //Handles Switch cases & Event Handlers
 				}
 				case 1:
 				{
-					std::cout << "How To Play has been pressed" << std::endl;
 					soundManager.PlaySound(1);
 					gStates = GameStates::HOW_TO_PLAY;
 					break;
@@ -149,7 +141,6 @@ void Game::ProcessEvents() //Handles Switch cases & Event Handlers
 				{
 				case 0:
 				{
-					std::cout << "Start Game has been pressed" << std::endl;
 					soundManager.StopSound(0);
 					soundManager.PlaySound(1);
 					gStates = GameStates::GAME_LOOP;
@@ -157,7 +148,6 @@ void Game::ProcessEvents() //Handles Switch cases & Event Handlers
 				}
 				case 1:
 				{
-					std::cout << "Back has been pressed" << std::endl;
 					soundManager.PlaySound(1);
 					gStates = GameStates::START_MENU;
 					break;
@@ -286,14 +276,12 @@ void Game::UpdateGameLoop() //Updates GameLoop
 	if (hud.GetPoints() == hud.GetMaxPoints())
 	{
 		soundManager.PlaySound(3); //Play win sound
-		std::cout << "Switch To WinState" << std::endl;
 		gStates = GameStates::WIN_STATE; //Switch to the winState gamestate
 	}
 	//if your lives are equal to the minimum lives you can reach, then go to the losestate
 	if (hud.GetLives() == hud.GetMinLives())
 	{
 		soundManager.PlaySound(2); //Play lose sound
-		std::cout << "Switch To LoseState" << std::endl;
 		gStates = GameStates::LOSE_STATE; //Switch to the loseState gamestate
 	}
 }

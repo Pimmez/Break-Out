@@ -6,7 +6,7 @@ PauseState::PauseState() //Constructor, Sets strings with points and lives. also
 
 	if (!font.loadFromFile(loadFont))
 	{
-		std::cout << "Error loading <opensans.ttf font> from file" << std::endl;
+		std::cout << "Error loading <pauseState texture> from file" << std::endl;
 	}
 	textPauseState.setFont(font);
 	textPauseState.setString(oStringPauseState.str());

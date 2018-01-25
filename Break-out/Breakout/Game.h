@@ -55,8 +55,8 @@ private:
 
 	float screenHeightOffset = 40; //Screen height offset for the HUD.
 	float screenwidthOffset = 12; //Screen width offset for the laser
-	bool isBallOutsideScreen; //Checks if the ball is outside the screen.
+	bool isBallOutsideScreen = false; //Checks if the ball is outside the screen.
 	bool isGameStarting = false; //Checks if the game has started
 };
 
-#endif //GAME_H
+#endif //!GAME_H

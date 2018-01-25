@@ -4,37 +4,37 @@ SoundManager::SoundManager() //Constructor, Sets all the sounds to the soundbuff
 {
 	if (!buffers[0].loadFromFile(loadSoundStartSound)) //0 = startgame Sound
 	{
-		std::cout << "SOUND ERROR" << std::endl;
+		std::cout << "Error loading <startGame sound> from file" << std::endl;
 		return;
 	}
 
 	if (!buffers[1].loadFromFile(loadSoundMenuClick)) //1 = menuclick Sound
 	{
-		std::cout << "SOUND ERROR" << std::endl;
+		std::cout << "Error loading <menuClick sound> from file" << std::endl;
 		return;
 	}
 
 	if (!buffers[2].loadFromFile(loadSoundLose)) //2 = lose Sound
 	{
-		std::cout << "SOUND ERROR" << std::endl;
+		std::cout << "Error loading <lose sound> from file" << std::endl;
 		return;
 	}
 
 	if (!buffers[3].loadFromFile(loadSoundWin)) //3 = win Sound
 	{
-		std::cout << "SOUND ERROR" << std::endl;
+		std::cout << "Error loading <win sound> from file" << std::endl;
 		return;
 	}
 
 	if (!buffers[4].loadFromFile(loadSoundDamage)) //4 = damage Sound
 	{
-		std::cout << "SOUND ERROR" << std::endl;
+		std::cout << "Error loading <damage sound> from file" << std::endl;
 		return;
 	}
 
 	if (!buffers[5].loadFromFile(loadSoundBounce)) //5 = bounce Sound
 	{
-		std::cout << "SOUND ERROR" << std::endl;
+		std::cout << "Error loading <bounce sound> from file" << std::endl;
 		return;
 	}
 

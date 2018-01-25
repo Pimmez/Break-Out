@@ -4,12 +4,12 @@ HowToPlay::HowToPlay() //Constructor, loads the texture & the font, also sets th
 {
 	if (!tHowToPlay.loadFromFile(loadfile))
 	{
-		std::cout << "Error: Missing texture(StartMenu)" << std::endl;
+		std::cout << "Error loading <HowToPlay texture> from file" << std::endl;
 	}
 
 	if (!font.loadFromFile(loadFont))
 	{
-		std::cout << "Error: Missing Font(StartMenu)" << std::endl;
+		std::cout << "Error loading <opensans.ttf font> from file" << std::endl;
 	}
 
 	sHowToPlay.setTexture(tHowToPlay);

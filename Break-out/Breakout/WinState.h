@@ -21,4 +21,4 @@ private:
 	sf::String loadFile = "images/winscreen.png"; //String with the path to the .png
 };
 
-#endif //WINSTATE_H
+#endif //!WINSTATE_H

@@ -21,4 +21,4 @@ private:
 	sf::String loadFile = "images/background.png"; //String with the path to the .png
 };
 
-#endif //BACKGROUND_H
+#endif //!BACKGROUND_H

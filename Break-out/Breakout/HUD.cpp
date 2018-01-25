@@ -6,7 +6,7 @@ HUD::HUD() //Constructor, Sets strings with points and lives. also sets the posi
 	oStringPoints << "Points: " << startPoints;
 	if (!font.loadFromFile(loadFont))
 	{
-		std::cout << "Error loading <.ttf font> from file" << std::endl;
+		std::cout << "Error loading <opensans.ttf font> from file" << std::endl;
 	}
 	textLives.setFont(font);
 	textLives.setString(oStringLives.str());

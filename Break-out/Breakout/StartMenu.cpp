@@ -4,12 +4,12 @@ StartMenu::StartMenu() //Constructor, loads the texture & the font, also sets th
 {
 	if (!tMenuBackground.loadFromFile(loadFile))
 	{
-		std::cout << "Error loading <background image> from file" << std::endl;
+		std::cout << "Error loading <menuBackground texture> from file" << std::endl;
 	}
 
 	if (!font.loadFromFile(loadFont))
 	{
-		std::cout << "Error: Missing Font(StartMenu)" << std::endl;
+		std::cout << "Error loading <opensans.ttf> from file" << std::endl;
 	}
 
 	sMenuBackground.setTexture(tMenuBackground);

@@ -4,7 +4,7 @@ Paddle::Paddle() //Constructor, loads texture, sets texture and sets sprite posi
 {
 	if (!tPaddle.loadFromFile(loadFile))
 	{
-		std::cout << "Error loading <paddle image> from file" << std::endl;
+		std::cout << "Error loading <paddle texture> from file" << std::endl;
 	}
 	sPaddle.setTexture(tPaddle);
 	sPaddle.setPosition(paddlePosX, paddlePosY);

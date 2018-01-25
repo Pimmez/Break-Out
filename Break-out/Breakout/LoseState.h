@@ -21,4 +21,4 @@ private:
 	sf::String loadFile = "images/losescreen.png"; //String with the path to the .png
 };
 
-#endif //LOSESTATE_H
+#endif //!LOSESTATE_H

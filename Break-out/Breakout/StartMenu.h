@@ -33,4 +33,4 @@ private:
 	sf::Text menuItems[MAX_NUMBER_OF_ITEMS]; //Array of texts, with the maximum number of menu items in it
 };
 
-#endif //STARTMENU_H
+#endif //!STARTMENU_H

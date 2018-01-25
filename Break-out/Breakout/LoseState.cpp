@@ -4,7 +4,7 @@ LoseState::LoseState() //Constructor, Loads texture, sets texture and sets posit
 {
 	if (!tLoseState.loadFromFile(loadFile))
 	{
-		std::cout << "Error loading <tLoseState> from file" << std::endl;
+		std::cout << "Error loading <loseState texture> from file" << std::endl;
 	}
 
 	sLoseState.setTexture(tLoseState);

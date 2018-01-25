@@ -43,4 +43,4 @@ private:
 	sf::String loadFile = "images/ball.png"; //String with the path to the .png
 };
 
-#endif //BALL_H
+#endif //!BALL_H
